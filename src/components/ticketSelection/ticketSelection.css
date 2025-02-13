@@ -1,0 +1,146 @@
+:root {
+    --form-body-fill: #041E23;
+    --form-body-stroke: #0E464F;
+    --text-color: #FFFFFF;
+    --selection-bar: #0E464F;
+    --selection-highlight: #24A0B5;
+}
+
+.ticket-selection-container {
+    margin-top: 2rem;
+    background: var(--background-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 0; 
+    overflow: hidden; 
+}
+
+.ticket-selection-card {
+    background: var(--form-body-fill);
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 480px; /* Slightly wider for balance */
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--form-body-stroke);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ticket-selection-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 3px;
+    width: 33%; /* Show only one step progress */
+    background: var(--selection-highlight);
+    margin-bottom: 12px;
+}
+
+.event-info {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+}
+
+.event-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.event-details,
+.event-date {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 4px;
+}
+
+.ticket-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 16px 0;
+    width: 100%;
+}
+
+.ticket-option {
+    background: var(--form-body-fill);
+    color: var(--text-color);
+    border: 1px solid var(--selection-bar);
+    padding: 16px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 120px;
+}
+
+.ticket-option:hover,
+.ticket-option.selected {
+    border-color: var(--selection-highlight);
+    background: var(--selection-highlight);
+}
+
+.select-tickets {
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.select-tickets label {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.select-tickets select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--selection-bar);
+    background: var(--form-body-fill);
+    color: var(--text-color);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px; /* Adjust spacing between buttons */
+    width: 100%;
+    max-width: 420px;
+}
+
+.cancel-button,
+.next-button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.cancel-button {
+    background: var(--form-body-stroke);
+    color: var(--text-color);
+}
+
+.next-button {
+    background: var(--selection-highlight);
+    color: var(--text-color);
+}
